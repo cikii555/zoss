@@ -54,17 +54,13 @@ Sistem je projektovan kao mikroservisna, event-driven arhitektura, prilagođena 
 
 Sastoji se iz sledećih celina:
 
-- Mikroservisi – svaki implementira odgovarajući specifični domen.
+- Mikroservisi – svaki implementira odgovarajući specifični domen (KYC service, Account service, Transaction service, Anti-fraud service, Notification service, Audit/Logging service, Reporting service i Admin service).
 - Klijentske aplikacije – mobilne i web aplikacije koje koriste krajnji korisnici (klijenti banke, bankarski službenici).
 - Skladištenje podataka – Digitalna banka koristi više specijalizovanih skladišta podataka, prilagođenih različitim tipovima informacija i zahtevima za performansama, dostupnošću i skalabilnošću. Ovaj višeslojni pristup omogućava optimizovanu obradu podataka, visoku pouzdanost i sigurnost.
 - API Gateway – rutiranje zahteva ka odgovarajućim mikroservisima.
 - Event-driven komponente – omogućena asinhrona razmena događaja.
 - Integracioni adapteri – povezivanje sa eksternim sistema (Visa, MasterCard).
-- **Autentifikacija i autorizacija – OAuth 2.0 / OpenID Connect**
-
-Centralizovan Identity servis  
-
-Višefaktorska autentifikacija (MFA), Token-based pristup servisima
+- Autentifikacija i autorizacija – OAuth 2.0 / OpenID Connect
 
 ---
 
@@ -77,7 +73,7 @@ Višefaktorska autentifikacija (MFA), Token-based pristup servisima
 - **Flutter** (Dart) – cross-platform za brže razvijanje funkcionalnosti na oba OS-a
 
 #### Backend
-- Mikroservisi – Golang / Rust  
+- Mikroservisi – Golang / Rust - visoke performanse, nisku latencija, brzo pokretanje,efikasno korišćenje memorije
 - **API Gateway** – Golang
 
 #### Event streaming
