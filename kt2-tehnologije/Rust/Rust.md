@@ -5,7 +5,7 @@ Rust je relativno “mlad” programski jezik koji je stekao veliku popularnost 
 Upravljanje memorijom zasniva se na sistemu vlasništva (`Ownership`), pri čemu kompajler striktno proverava poštovanje tih pravila. Ukoliko se bilo koje pravilo prekrši, program se neće uspešno kompajlirati.
 
 # Arhitektura jezika
-![Arhitektura jezika](Rust_arhitektura.png)
+![Arhitektura jezika](rust_arhitektura.png)
 
 ## Rustup
 
