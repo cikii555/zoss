@@ -1,6 +1,6 @@
 # Cassandra – distribuirana NoSQL baza podataka
 
-Cassandra je distribuirana NoSQL baza podataka. Po dizajnu, NoSQL baze podataka su lagane, otvorenog koda, nerealacionog tipa i uglavnom distribuirane. Među njihovim prednostima su horizontalna skalabilnost, distribuirane arhitekture i fleksibilan pristup definisanju šeme.
+Cassandra je distribuirana NoSQL baza podataka. Po dizajnu, NoSQL baze podataka open-source, nerealacionog tipa i uglavnom distribuirane. Među njihovim prednostima su horizontalna skalabilnost, distribuirane arhitekture i fleksibilan pristup definisanju šeme.
 
 ## Arhitektura Cassandre
 
@@ -75,4 +75,8 @@ Dostupnost (Availability)
 
 Otpornost na particionisanje (Partition tolerance)
 
-Cassandra pruža fleksibilnost u izboru između konzistentnosti i dostupnosti prilikom upita nad podacima. Drugim rečima, podaci mogu biti visoko dostupni uz niži stepen konzistentnosti, ili visoko konzistentni uz manju dostupnost
+Cassandra pruža fleksibilnost u izboru između konzistentnosti i dostupnosti prilikom upita nad podacima. Drugim rečima, podaci mogu biti visoko dostupni uz niži stepen konzistentnosti, ili visoko konzistentni uz manju dostupnost.
+
+# Reference
+- https://cassandra.apache.org/_/cassandra-basics.html 
+-https://www.instaclustr.com/blog/cassandra-architecture/ 
