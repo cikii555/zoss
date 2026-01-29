@@ -30,7 +30,7 @@ Svaka tabela ima definisan primary key (primarni ključ). Primarni ključ je pod
 
 Partition key se koristi u Cassandri za indeksiranje podataka. Svi redovi koji dele isti partition key čine jednu data particiju, koja predstavlja osnovnu jedinicu particionisanja podataka, skladištenja i preuzimanja u Cassandri.
 
-###Partitioning
+### Partitioning
 
 U Cassandri se partition key ne koristi direktno za pronalaženje podataka. Umesto toga, on se prvo prosleđuje funkciji koja se zove partitioner, čiji je zadatak da od vrednosti partition key-a izračuna token.
  On primenjuje hash funkciju nad partition key-em i kao rezultat daje jedan celobrojni token. Taj token je broj iz velikog opsega vrednosti i nazivase token range.
@@ -79,4 +79,4 @@ Cassandra pruža fleksibilnost u izboru između konzistentnosti i dostupnosti pr
 
 # Reference
 - https://cassandra.apache.org/_/cassandra-basics.html 
--https://www.instaclustr.com/blog/cassandra-architecture/ 
+- https://www.instaclustr.com/blog/cassandra-architecture/ 
