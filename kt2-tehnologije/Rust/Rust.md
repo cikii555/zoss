@@ -5,7 +5,7 @@ Rust je relativno “mlad” programski jezik koji je stekao veliku popularnost 
 Upravljanje memorijom zasniva se na sistemu vlasništva (`Ownership`), pri čemu kompajler striktno proverava poštovanje tih pravila. Ukoliko se bilo koje pravilo prekrši, program se neće uspešno kompajlirati.
 
 # Arhitektura jezika
-![Arhitektura jezika](673dd84b7825bdfb8796ef7a_65254585c1fe3a8290e5fe9b_rust-applications-2023)
+![Arhitektura jezika](Rust_arhitektura.png)
 
 ## Rustup
 
@@ -36,7 +36,7 @@ Crate je najmanja jedinica koda koju Rust kompajler obrađuje u jednom trenutku.
 
 
 # Standardna biblioteka
-![Standardna biblioteka](Rust_standard_libraries.svg)
+![Standardna biblioteka](Rust_standard_libraries.svg.png)
 
 Rust standardna biblioteka predstavlja temelj prenosivog Rust softvera: skup minimalnih i provernih apstrakcija koje dijeli širi Rust ekosistem. Ona pruža osnovne tipove, poput Vec<T> i Option<T>, bibliotečke operacije nad jezičkim primitivima, standardne makroe, ulaz/izlaz (I/O) i multithreading, kao i mnoge druge funkcije.
 
