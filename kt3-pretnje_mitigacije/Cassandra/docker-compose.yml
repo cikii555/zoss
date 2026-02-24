@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  cassandra:
+    image: cassandra:4.1
+    container_name: cass-demo
+    ports:
+      - "9042:9042"
