@@ -1,6 +1,6 @@
 # UVOD
 
-U narednom dijelu biće objašnjeni neki od napada koji koriste ranjivosti Rusta kao jezika.
+U narednom delu biće objašnjeni neki od napada koji koriste ranjivosti Rusta kao jezika.
 
 ## Sigurnosne pretnje
 
@@ -26,9 +26,7 @@ Interfejs za strane funkcije (Foreign Function Interface – FFI) u Rust-u omogu
 
 Napad koji se izvodi zaobilazi jednostavne provere granica koje Rust ubacuje za određene pristupe memoriji. Za objekte u memoriji sa statički definisanom veličinom, kao što su nizovi, Rust će izvršiti proveru granica pri odgovarajućim pristupima memoriji. Na slici 6a, struktura Data sadrži polje vals koje je niz statički određene veličine. Kada bi se pokušao pristup četvrtom elementu x.vals, recimo na liniji 13, program bi ili potpuno neuspeo da se kompajlira ili bi izazvao panic u runtime-u, u zavisnosti od optimizacija Rust kompajlera.
 
-Međutim, kada Rust pozove vuln_fn na liniji 8, unsafe C/C++ funkcija slobodno može da pristupi (i izmeni) četvrti element x.vals. Pošto je “četvrti” element x.vals zapravo pokazivač na funkciju, x.cb, u memoriji, C/C++ može da izmeni Rust pokazivač na funkciju, ostvarujući preuzimanje kontrole toka izvršenja i pokretanje neobične mašine kada Rust kasnije koristi pokazivač na funkciju na liniji 11.
-
-Dakle, kada Rust interfejsira sa FFI, uobičajena prostor-vezana sigurnost memorije koju Rust obezbeđuje može da neprimetno zakaže.
+Međutim, kada Rust pozove vuln_fn u kodu ispod, unsafe C/C++ funkcija slobodno može da pristupi (i izmeni) četvrti element x.vals. Pošto je “četvrti” element x.vals zapravo pokazivač na funkciju, x.cb, u memoriji, C/C++ može da izmeni Rust pokazivač na funkciju, ostvarujući preuzimanje kontrole toka izvršenja i pokretanje neobične mašine kada Rust kasnije koristi pokazivač na funkciju u kodu ispod.
 
 ### Rust primer
 
@@ -60,7 +58,7 @@ void vuln_fn(int64_t array_ptr_addr) {
 }
 ```
 
-### U bankarskom kontekstu, to bi značilo:
+### U kontekstu aplikacije koja se obrađuje, to bi značilo:
 
 - Napadač (ili greška u modulu) može da prepiše funkciju za autorizaciju.
 - Kada Rust kasnije pokuša da pozove funkciju cb da odobri transakciju, poziva se maliciozna funkcija umesto originalne.
@@ -72,7 +70,7 @@ void vuln_fn(int64_t array_ptr_addr) {
 
 ## RAW POINTER WRAPPER
 
-Neobrađeni (raw) pokazivači iz C/C++ koda zahtevaju pažljivo rukovanje. Direktno korišćenje takvih pokazivača u Rust-u je rizično, jer Rust ne može automatski garantovati memorijsku bezbednost.
+ Raw pokazivači iz C/C++ koda zahtevaju pažljivo rukovanje. Direktno korišćenje takvih pokazivača u Rust-u je rizično, jer Rust ne može automatski garantovati memorijsku bezbednost.
 
 Standardni pristup je “umotavanje” pokazivača u Rust strukturu koja definiše sigurnosne pravila i ograničenja. Takva struktura proverava granice niza, sprečava modifikaciju kritičnih polja (kao što su pokazivači na funkcije) i omogućava ostatku programa da koristi podatke samo kroz sigurne metode, bez direktnog pristupa raw pointeru.
 
@@ -99,7 +97,7 @@ Rust ekosistem se u velikoj meri oslanja na Cargo i crates.io za upravljanje pak
 ```c
 pub fn random_number() -> u32 {
     println!("Prikupljanje osetljivih podataka...");
-    42 // vraća rezultat koji može zavarati programera
+    42 
 }
 ```
 

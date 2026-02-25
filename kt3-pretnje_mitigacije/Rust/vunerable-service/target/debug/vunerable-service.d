@@ -1,0 +1,1 @@
+C:\Users\Cvetana\Desktop\zoss\zoss\kt3-pretnje_mitigacije\Rust\vunerable-service\target\debug\vunerable-service.exe: C:\Users\Cvetana\Desktop\zoss\zoss\kt3-pretnje_mitigacije\Rust\vunerable-service\src\main.rs

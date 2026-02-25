@@ -1,0 +1,1 @@
+C:\Users\Cvetana\Desktop\zoss\zoss\kt3-pretnje_mitigacije\Rust\secure-service\target\debug\secure-service.exe: C:\Users\Cvetana\Desktop\zoss\zoss\kt3-pretnje_mitigacije\Rust\secure-service\src\main.rs
