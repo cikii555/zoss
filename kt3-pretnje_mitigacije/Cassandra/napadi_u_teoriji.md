@@ -103,7 +103,7 @@ Zbog određenih obrazaca pristupa i modelovanja podataka, neke particije mogu po
 
 ---
 
-## Denylisting (blokiranje “vrelih” particija)
+## Denylisting (blokiranje "hot" particija)
 
 Cassandra omogućava blokiranje takvih particija putem mehanizma **denylisting**. Kada klijent pokuša da izvrši SELECT upit nad blokiranom particijom (bilo direktno po ključu ili kroz opseg podataka), upit će odmah biti odbijen uz grešku `InvalidQueryException`.
 
