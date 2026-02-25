@@ -40,7 +40,7 @@ fn rust_fn(cb_fptr: fn(&mut i64)) {
 
     unsafe { vuln_fn(/* Ptr to x.vals */) }
 
-    // Uses corrupted function pointer
+    // corupted pointer
     (x.cb)(&mut x.vals[0]);
 }
 ```
