@@ -119,11 +119,7 @@ Potrebno je unijeti:
 
 ---
 
-## Request Coalescing
 
-Dodali su posrednički sloj podataka, poznat kao **Data Services**, između backend servisa i baze podataka. Cilj ovog sloja bio je da smanji broj zahtjeva koji se šalju ka particiji baze podataka.
-
----
 
 # REFERENCE
 
